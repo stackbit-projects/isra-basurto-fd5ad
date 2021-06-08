@@ -1,0 +1,148 @@
+stackbitVersion: ~0.3.0
+ssgName: jekyll
+publishDir: _site
+dataDir: _data
+pagesDir: ''
+models:
+  post:
+    type: page
+    label: Post
+    folder: _posts
+    match: '*'
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: category
+        label: Category
+      - type: string
+        name: summary
+        label: Summary
+      - type: image
+        name: image
+        label: Image
+      - type: string
+        name: external_url
+        label: External Url
+      - type: string
+        name: external_name
+        label: External Name
+      - type: string
+        name: image_alt
+        label: Image Alt
+  page_1:
+    type: page
+    label: Page 1
+    match: '*'
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: markdown
+        name: summary
+        label: Summary
+      - type: string
+        name: category
+        label: Category
+  menu:
+    type: data
+    label: Menu
+    file: menu.yml
+    fields:
+      - type: string
+        name: menu_title
+        label: Menu Title
+      - type: string
+        name: menu_headline
+        label: Menu Headline
+      - type: string
+        name: menu_intro
+        label: Menu Intro
+      - type: boolean
+        name: show_menu_on_gate_page
+        label: Show Menu On Gate Page
+      - type: boolean
+        name: minimal_menu
+        label: Minimal Menu
+      - type: image
+        name: menu_logo
+        label: Menu Logo
+      - type: list
+        name: menu_pages
+        label: Menu Pages
+        items:
+          type: object
+          fields:
+            - type: string
+              name: title
+              label: Title
+            - type: string
+              name: url
+              label: Url
+            - type: boolean
+              name: show_on_home
+              label: Show On Home
+            - type: image
+              name: image_url
+              label: Image Url
+            - type: string
+              name: icon_name
+              label: Icon Name
+            - type: string
+              name: category
+              label: Category
+            - type: string
+              name: tooltip
+              label: Tooltip
+            - type: string
+              name: description
+              label: Description
+      - type: list
+        name: menu_contacts
+        label: Menu Contacts
+        items:
+          type: object
+          fields:
+            - type: string
+              name: faicon
+              label: Faicon
+            - type: string
+              name: target
+              label: Target
+  meta_data:
+    type: data
+    label: Meta Data
+    file: metaData.yml
+    fields:
+      - type: string
+        name: author
+        label: Author
+      - type: image
+        name: avatar_url
+        label: Avatar Url
+      - type: boolean
+        name: lightTheme
+        label: Light Theme
+      - type: boolean
+        name: show_menu_logo_on_home_page
+        label: Show Menu Logo On Home Page
+      - type: object
+        name: cookies
+        label: Cookies
+        fields:
+          - type: boolean
+            name: enabled
+            label: Enabled
+          - type: string
+            name: message
+            label: Message
+          - type: string
+            name: agreeButtonText
+            label: Agree Button Text
